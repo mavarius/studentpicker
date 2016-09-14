@@ -45,7 +45,7 @@ function init() {
     var $teamInput = $('#team_size');
     var teamSize = $teamInput.val();
 
-    if (teamSize > 0) {
+    if (teamSize > 0 && teamSize <= totalStudents.length) {
       var teamSet = {};
       for (var i = 0; i < teamSize; i++) {
         teamSet[i] = [];
@@ -76,8 +76,10 @@ function init() {
           $("#teams .team:nth-of-type("+(x+1)+")").append("<li>"+teamSet[x][y]+"</li>");
         }
       }
+    } else if (teamSize <= 0) {
+      $("#teams").append("<p>You must input more than 0 teams.</p>");
     } else {
-      $("#teams").append("<p>Input must be greater than 0.</p>")
+      $("#teams").append(`<p>Number of teams must be less than ${totalStudents.length}.</p>`);
     }
   }
 
