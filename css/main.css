@@ -11,7 +11,7 @@ h1 {
   color: white;
 }
 
-#student_list, #teams {
+.pane {
   width: 50vw;
   background-color: white;
   border-radius: 5px;

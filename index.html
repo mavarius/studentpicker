@@ -18,17 +18,20 @@
   <div id="generator">
     <h1>Team Generator</h1>
 
-    <div id="student_list">
+    <div id="student_list" class="pane">
       <h2>Student List</h2>
       <input type="text" id="name">
       <button id='add' class="btn btn-primary">Add Students</button>
+      <button id='prefect' class="btn btn-primary">Choose Prefect</button>
       <ul id="list"></ul>
+      <h5 class='prefect_pick'></h5>
     </div>
 
-    <div id="teams">
+    <div class="pane">
       <h2>Teams</h2>
       <input type="text" id="team_size">
       <button id="form_teams" class="btn btn-primary">Form Teams</button>
+      <div id="teams"></div>
     </div>
   </div>
 </body>
